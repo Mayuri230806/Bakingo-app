@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bakery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+   <header class="navbar">
+    <div class="logo">BAKERY</div>
+    <nav>
+      <!-- <a href="#Home">Home</a>
+      <a href="#menu">Menu</a> -->
+      <!-- <a href="#about">About</a> -->
+      <a href="about.html">About</a>
+      
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      
+    <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+      
+
+<button onclick="whatsappOrder()" 
+style="background:#25D366;color:white;padding:12px 20px;border:none;border-radius:6px;font-size:16px;cursor:pointer;margin:5px;">
+whatsappOrder
+
+</button>
+
+
+
+
+
+
+    </nav>
+  </header> 
+
+  <!-- Hero Section -->
+   <section class="hero">
+    <div class="hero-content">
+      <h1>Freshly Baked,<br>Just for You!</h1>
+      <p>Experience the taste of handcrafted breads and pastries made with love.</p>
+      <button onclick="whatsappOrder()" 
+style="background:#d3256d;color:white;padding:12px 20px;border:none;border-radius:6px;font-size:16px;cursor:pointer;margin:5px;">
+whatsappOrder
+
+</button>
+
+
+    </div>
+  </section> 
+
+  <!-- Why Choose Us -->
+   <section class="why">
+    <h2>Why Choose Us?</h2>
+    <div class="card-container">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec" alt="">
+        <h3>Artisan Breads</h3>
+        <p>Freshly baked traditional breads every day.</p>
+        <button onclick="showCategory('bread')">View More</button>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="">
+        <h3>Sweet Pastries</h3>
+        <p>Delicious pastries made with premium ingredients.</p>
+        <button onclick="showCategory('pastry')">View More</button>
+      </div>
+
+
+      <div class="card">
+        <img src="donut.jpg" alt="">
+        <h3>Donuts</h3>
+        <p>Where Every Bite Melts Your Heart.</p>
+       <button onclick="showCategory('donut')">View More</button>
+
+      </div>
+
+
+      <div class="card">
+        <img src="coffee.jpg" alt="">
+        <h3>coffee</h3>
+        <p>Sip. Relax. Repeat.</p>
+        <!-- <button onclick="showCategory('coffee')">View More</button> -->
+         <button class="view-btn" onclick="showCategory('coffee')">View More</button>
+      </div>
+
+    </div>
+  </section>
+  
+<!-- PRODUCTS SHOW AREA -->
+<section id="productSection">
+
+  <!-- BREAD -->
+  <div class="category bread">
+    <h2>Breads</h2>
+    <div class="product-grid">
+      <div class="product-card"><img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec">
+        <p>Sourdough</p> 
+         <span class="price">₹150</span> <div class="rating">⭐⭐⭐⭐☆</div><button onclick="addToCart('Sourdough',150)">Add to Cart</button></div>    
+      <div class="product-card"><img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73"><p>Baguette</p> <span class="price">₹190</span> <div class="rating">⭐⭐⭐⭐</div><button onclick="addToCart('Baguette',190)">Add to Cart</button></div>
+      <div class="product-card"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff"><p>Whole Wheat</p> <span class="price">₹130</span> <div class="rating">⭐⭐⭐⭐☆</div><button onclick="addToCart('Whole Wheat',130)">Add to Cart</button></div>
+      <div class="product-card"><img src="onion.jpg"><p>Red onion bread</p> <span class="price">₹250</span> <div class="rating">⭐⭐⭐⭐☆</div><button onclick="addToCart('Red onion bread',250)">Add to Cart</button></div>
+    </div>
+  </div>
+
+  <!-- PASTRY -->
+  <div class="category pastry">
+    <h2>Pastries</h2>
+    <button onclick="showCategory('pastry')">View More</button>
+    <div class="product-grid">
+      <div class="product-card"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587"><p>Chocolate Cake</p> <span class="price">₹450</span> <div class="rating">⭐⭐⭐⭐☆</div><button onclick="addToCart('Chocolate Cake',180)">Add to Cart</button></div>
+      <div class="product-card"><img src="s.jpg"><p>Strawberry Tart</p> <span class="price">₹350</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('Strawberry Tart',350)">Add to Cart</button></div>
+      <div class="product-card"><img src="p.jpg"><p>pineapple pastry</p> <span class="price">₹150</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('pineapple pastry',150)">Add to Cart</button></div>
+      <div class="product-card"><img src="r.jpg"><p>red velvet</p> <span class="price">₹350</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('red velvet',350)">Add to Cart</button></div>
+    </div>
+  </div>
+
+  <!-- DONUT -->
+  <div class="category donut">
+    <h2>Donuts</h2>
+    <button onclick="showCategory('donut')">View More</button>
+    <div class="product-grid">
+      <div class="product-card"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b"><p>Chocolate Donut</p> <span class="price">200</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('chocolate donut',200)">Add to Cart</button></div>
+      <div class="product-card"><img src="g.jpg"><p>Glazed Donut</p> <span class="price">₹350</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('Glazed Donut',350)">Add to Cart</button></div>
+       <div class="product-card"><img src="cake.jpg"><p>Cake Donut</p> <span class="price">₹350</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('Cake Donut',350)">Add to Cart</button></div>
+        <div class="product-card"><img src="y.jpg"><p>Yeast Donut</p> <span class="price">₹220</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('Yeast Donut',220)">Add to Cart</button></div>
+    </div>
+  </div>
+
+  <!-- COFFEE -->
+  <div class="category coffee">
+    <h2>Coffee</h2>
+    <div class="product-grid">
+      <div class="product-card"><img src="expresso.jpg" alt="Espresso"><p>Espresso</p> <span class="price">₹170</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('Expresso',170)">Add to Cart</button></div>
+      <div class="product-card"><img src="c.jpg" alt="Cappuccino"><p>Cappuccino</p> <span class="price">₹120</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('Cappuccino',120)">Add to Cart</button></div>
+       <div class="product-card"><img src="a.jpg" alt="Americano"><p>Americano</p> <span class="price">₹200</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('Americano',200)">Add to Cart</button></div>
+       <div class="product-card"><img src="l.jpg" alt="Latte"><p>Latte</p> <span class="price">₹90</span> <div class="rating">⭐⭐⭐⭐☆</div> <button onclick="addToCart('Latte',90)">Add to Cart</button></div>
+       
+
+
+    </div>
+  </div>
+
+</section>
+
+  <div class="luxeflow">
+  <div class="track">
+    <span>luxelayers.com • </span>
+    <span>luxelayers.com • </span>
+    <span>luxelayers.com • </span>
+    <span>luxelayers.com • </span>
+    <span>luxelayers.com • </span>
+  </div>
+</div>
+
+
+ 
+<!-- Cart Section -->
+
+
+
+
+   <!-- <div class="category bread">
+    <h2>Breads</h2>
+    <p>Sourdough</p>
+    <p>Baguette</p>
+    <p>Whole Wheat</p>
+    <p>Red onion bread</p>
+  </div>  -->
+
+  <!-- Pastry Items -->
+  <!-- <div class="category pastry">
+    <h2>Pastries</h2>
+    <p>Chocolate Cake</p>
+    <p>Strawberry Tart</p>
+    <p>Pineapple Pastry</p>
+    <p>Red velvet</p>
+  </div>  -->
+
+  <!-- Donut Items -->
+  <!-- <div class="category donut">
+    <h2>Donuts</h2>
+    <p>Chocolate Donut</p>
+    <p>Glazed Donut</p>
+    <p>Cake Donut</p>
+    <p>Yeast Donut</p>
+  </div> -->
+
+  <!-- Coffee Items -->
+   <!-- <div class="category coffee">
+    <h2>Coffee</h2>
+    <p>Espresso</p>
+    <p>Cappuccino</p>
+    <P>Americano</P>
+    <p>Latte</p>
+    </div>
+  </div> -->
+  <!-- Cart Section -->
+ <!-- <h2>Your Cart</h2>
+<ul id="cart-list"></ul>
+<p id="total">Total: ₹0</p>
+<button class="checkout" onclick="checkout()">Checkout</button> -->
+<div class="cart-container">
+  <h2>Your Cart</h2>
+  <ul id="cart-list"></ul>
+  <p id="total">Total: ₹0</p>
+  <button class="checkout" onclick="checkout()">Checkout</button>
+</div>
+
+
+<section class="video-banner">
+
+    <img src="s.jpeg" class="banner-img" alt="Banner">
+
+    <div class="play-button" id="openVideo">
+        ▶
+    </div>
+
+    <!-- BUTTON -->
+<button onclick="openVideo()">Watch Video</button>
+
+
+<div class="video-modal" id="videoModal">
+  <div class="video-box">
+    <span class="close-btn" onclick="closeVideo()">&times;</span>
+   
+    <iframe
+      id="youtubeVideo"
+      src="https://www.youtube.com/embed/R0YH5ELrPxo"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+</div>
+
+
+</section>
+
+
+
+  <!-- Visit Section -->
+   <section class="visit">
+    <div class="visit-text">
+      <h2>Visit Us Today</h2>
+      <p>Come and enjoy our freshly baked delights. We are open 7 days a week. Baked fresh. Served warm. Made with love. 🧁🤍 Come experience comfort in every bite. 🍞✨
+      </p>
+      <button class="main-btn">Visit Our Bakery</button>
+    </div>
+
+    <div class="visit-images">
+      <img src="https://images.unsplash.com/photo-1542826438-7d4a4c13e6d7" alt="">
+      <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FrZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+    </div>
+  </section> 
+
+  <!-- Gallery -->
+   <section class="gallery">
+   <section class="gallery">
+  <img src="images/donut.jpg" alt="">
+  <img src="images/coffee.jpg" alt="">
+  <img src="bakery.jpeg" alt="">
+</section>
+  </section> 
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left -->
+    <div class="footer-left">
+      <h3>Luxe layers</h3>
+      <p>936 Fulton Street</p>
+      <p>Brooklyn, New York 11238</p>
+      <p>Contact Us: 7890XXXXXXX</p>
+    </div>
+
+ 
+    <div class="footer-center">
+      <h3>join our bakery</h3>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Email address">
+        <button>SIGN UP</button>
+      </div>
+    </div>
+
+  
+    <div class="footer-right">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#">📷</a>
+        <a href="#">🐦</a>
+        <a href="#">📘</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    ©2026 Luxe layers | Privacy Policy | Site by Mayuri
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script src="script.js"></script>
+</body>
+</html> 
+
+
+
