@@ -1,2 +1,27 @@
-# Bakingo-app
-350 char  Bakingo Clone – A responsive cake ordering website built using HTML, CSS, and JavaScript. The project allows users to browse different cakes, view prices, and add items to the cart through a simple and interactive interface. It focuses on front-end development concepts, UI design, and basic JavaScript functionality inspired by Bakingo.
+Bakingo app Website
+
+This project is a front-end clone of the Bakingo cake ordering platform developed using HTML, CSS, and JavaScript. The website allows users to explore different cake options, view product details, and add cakes to the cart through an interactive interface.
+
+Features
+
+Responsive user interface
+
+Cake product listing
+
+Add to cart functionality
+
+Clean and modern UI design
+
+Interactive buttons using JavaScript
+
+Technologies Used
+
+HTML5
+
+CSS3
+
+JavaScript
+
+Purpose
+
+The purpose of this project is to practice front-end web development and create a real-world e-commerce style UI similar to Bakingo.
