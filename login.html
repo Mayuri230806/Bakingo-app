@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Luxe Layers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">LUXE LAYERS</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="login-page">
+    <div class="login-card">
+      <p class="login-kicker">Member Access</p>
+      <h1>Sign in to your account</h1>
+      <p class="login-intro">Track your bakery orders, save favorites, and check out faster on your next visit.</p>
+
+      <form id="loginForm" class="login-form">
+        <label for="loginName">Full Name</label>
+        <input type="text" id="loginName" placeholder="Enter your name" required>
+
+        <label for="loginEmail">Email Address</label>
+        <input type="email" id="loginEmail" placeholder="Enter your email" required>
+
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+
+        <button type="submit" class="main-btn login-submit">Login</button>
+      </form>
+
+      <p class="login-note" id="loginStatus">New here? Your account details will be saved on this device for demo purposes.</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
